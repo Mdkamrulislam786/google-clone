@@ -2,10 +2,13 @@ import React from "react";
 import "./SearchPages.css";
 import { useStateValue } from "../../StateProvider";
 import useGoogleSearch from '../../useGoogleSearch'
+import response from '../../response'
 
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateValue();
-  const {data} = useGoogleSearch(term);
+  //Live API CALL
+  // const {data} = useGoogleSearch(term);
+  const data = response
   console.log(data)
   return (
     <div className="searchPage">
