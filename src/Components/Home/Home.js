@@ -8,6 +8,7 @@ import googleLogo from "../../images/google.png";
 //Componne
 import Search from "../Search/Search";
 
+
 const Home = () => {
   return (
     <div className="home">
@@ -26,7 +27,7 @@ const Home = () => {
       <div className="home_body">
         <img className="googleLogo" src={googleLogo} alt="google" />
         <div className="inputContainer">
-          <Search hideButtons/>
+          <Search hideButtons />
         </div>
       </div>
     </div>

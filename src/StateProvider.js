@@ -10,6 +10,4 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 );
 
 //Hook which allows us to pull info from the data  layer
-export const useStateValue = () => {
-  useContext(StateContext);
-};
+export const useStateValue = () =>  useContext(StateContext);

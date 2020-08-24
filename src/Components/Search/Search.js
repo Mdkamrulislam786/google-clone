@@ -4,13 +4,23 @@ import SearcIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+import { actionTypes } from "../../reducer";
 
-const Search = ({hideButtons}) => {
+const Search = ({ hideButtons }) => {
+  const [ {}, dispatch] = useStateValue();
+//api_key=AIzaSyCQUnZoapVot8lkUdS7Ux-hi7ynv4RP_BQ
   const [input, setInput] = useState("");
   const history = useHistory("");
+
   const search = (e) => {
     e.preventDefault();
     console.log(`You hit the neter button>>`, input);
+
+    dispatch({
+      type: actionTypes.SET_SEARCH_TERM,
+      term: input,
+    });
 
     //do something with input..come back and fix
     history.push("./search");
