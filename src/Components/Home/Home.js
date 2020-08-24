@@ -26,7 +26,7 @@ const Home = () => {
       <div className="home_body">
         <img className="googleLogo" src={googleLogo} alt="google" />
         <div className="inputContainer">
-          <Search />
+          <Search hideButtons/>
         </div>
       </div>
     </div>
