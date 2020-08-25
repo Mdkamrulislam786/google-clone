@@ -8,11 +8,11 @@ import { useStateValue } from "../../StateProvider";
 import { actionTypes } from "../../reducer";
 
 const Search = ({ hideButtons }) => {
-  const [ {}, dispatch] = useStateValue();
+  const [ importantThing = {}, dispatch] = useStateValue();
 //api_key=AIzaSyCQUnZoapVot8lkUdS7Ux-hi7ynv4RP_BQ
   const [input, setInput] = useState("");
   const history = useHistory("");
-
+ 
   const search = (e) => {
     e.preventDefault();
     console.log(`You hit the neter button>>`, input);
@@ -24,6 +24,7 @@ const Search = ({ hideButtons }) => {
 
     //do something with input..come back and fix
     history.push("./search");
+   console.log( importantThing);
   };
 
   return (

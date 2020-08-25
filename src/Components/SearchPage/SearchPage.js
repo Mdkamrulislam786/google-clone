@@ -2,9 +2,9 @@ import React from "react";
 import "./SearchPages.css";
 import { useStateValue } from "../../StateProvider";
 import useGoogleSearch from "../../useGoogleSearch";
-import Response from "../../response";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
+// import Response from '../../response'
 
 //Img&Icons
 import googleLogo from "../../images/google.png";
@@ -16,12 +16,12 @@ import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const SearchPage = () => {
-  const [{ term }, dispatch] = useStateValue();
+  const [{ term }] = useStateValue();
   //Live API CALL
   const { data } = useGoogleSearch(term);
   //MAKE API CALL
   // const data = Response;
-  // console.log(data);
+
   return (
     <div className="searchPage">
       <div className="searchPage_header">
