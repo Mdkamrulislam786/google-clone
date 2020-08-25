@@ -35,7 +35,6 @@
 .home_body {
     display: flex;
     flex: 1;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -44,4 +43,22 @@
 
 .googleLogo {
     height: 20rem;
+}
+@media (min-width:320px) and (max-width:480px){
+    .googleLogo{
+        height: 12rem;
+        padding: 30px;
+    }
+    .home_headerRight {
+        min-width: 13vw;
+        justify-content: space-around;
+    }
+    
+    .home_headerRight>.MuiSvgIcon-root {
+        margin-right: 0px;
+    }
+    .home_header a{
+        margin-right: 5px;
+        font-size: 14px;
+    }
 }

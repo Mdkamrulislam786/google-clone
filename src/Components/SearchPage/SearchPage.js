@@ -20,10 +20,8 @@ const SearchPage = () => {
   //Live API CALL
   const { data } = useGoogleSearch(term);
   //MAKE API CALL
-
   // const data = Response;
-
-  console.log(data);
+  // console.log(data);
   return (
     <div className="searchPage">
       <div className="searchPage_header">
@@ -31,8 +29,10 @@ const SearchPage = () => {
           <img src={googleLogo} alt="logo" className="searchPage_Logo" />
         </Link>
         {/* ICONS */}
+
         <div className="searchPage_Body">
           <Search hideButtons />
+         
           <div className="searchpage_options">
             <div className="searchpage_optionsLeft">
               <div className="searchpage_option">
