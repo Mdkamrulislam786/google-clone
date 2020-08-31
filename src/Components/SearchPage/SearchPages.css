@@ -105,30 +105,29 @@
 @media (min-width:320px) and (max-width:480px) {
 
     .searchPage_header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        position: static;
     }
 
     .searchPage_Logo {
-        margin-right: 0px;
+        margin-left: 7rem;
+        margin-right: auto !important;
+        height: 80px;
     }
 
-    .searchpage_optionsLeft {
-        display: block;
-
-    }
-
-    .searchpage_optionRight {
-        display: block;
-
+    .searchpage_options {
+        font-size: 12px;
     }
 
     .searchpage_option {
-        display: flex;
-        align-items: flex-start;
         margin-right: 3px;
+    }
+
+    .searchPage_Body>.search>.search_inpput {
+        margin-top: 0px;
+        max-width: 290px !important;
+        padding: 5px !important;
     }
 
     .searchpage_results {
